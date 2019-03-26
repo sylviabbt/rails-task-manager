@@ -1,0 +1,14 @@
+<h1><%= @task.title %></h1>
+
+<p><%= @task.details %></p>
+
+<p><%= @task.completed %></p>
+
+<p><%= link_to "edit",  task_edit_path(@task) %></p>
+
+<%= link_to task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } do %> <i class="fas fa-dumpster-fire"></i>
+      <% end %>
+
+<%= link_to 'back to list', tasks_path %>
